@@ -96,8 +96,57 @@ header
         margin-left: 0
 
 
+.header
+  // min-width: 1000px
+  padding-top: 91px
+  // display: inline-grid
+  // grid-template-columns: 1fr 2fr
+  // grid-column-gap: 50px
+  display: grid
+  // grid-template-columns: repeat(auto-fill, minmax(280px, 280px))
+  grid-template-columns: 414px 630px
+  grid-column-gap: 172px
+  grid-template-rows: 532px
 
+.header_text
+  h1
+    color: #112950
+    font-family: 'Roboto', sans-serif
+    font-size: 45px
+    letter-spacing: 0.8px
+    line-height: 56.4px
+    font-weight: 400
+  h3
+    max-width: 423px
+    color: #324b72
+    font-family: 'Inter', sans-serif
+    font-size: 18px
+    letter-spacing: 0.15px
+    line-height: 29.99px
+    padding: 42px 0
+    font-weight: 400
+  a
+    color: #ffffff
+    font-family: 'Inter', sans-serif
+    font-size: 15px
+    letter-spacing: 0.15px
+    line-height: 24px
+    text-decoration: none
+    padding: 18px 32px
+    background-color: #2e85ff
+    border-radius: 30px
+    font-weight: 400
+    transition: .3s
+    animation-timing-function: ease-in-out
+    &:hover
+      -webkit-box-shadow: 6px 8px 0px 0px rgba(53,119,212,0.26)
+      -moz-box-shadow: 6px 8px 0px 0px rgba(53,119,212,0.26)
+      box-shadow: 6px 8px 0px 0px rgba(53,119,212,0.26)
 
+.header_phone
+  background: url(../img/header/phone.png) no-repeat
+.header_tablet
+  background: url(../img/header/tablet.png) no-repeat
 
 
 
