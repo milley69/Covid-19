@@ -96,6 +96,79 @@ header
         margin-left: 0
 
 
+
+.header__burger
+  display: none
+
+.header__burger.active
+  top: 69px
+  &::before
+    transform: rotate(45deg)
+    top: 9px
+  &::after
+    transform: rotate(-45deg)
+    top: 9px
+  span
+    transform: scale(0)
+
+@media (max-width:768px)
+  body.lock
+    overflow: hidden
+  .header__burger
+    margin: 0 10% 0 auto
+    display: block
+    position: relative
+    width: 30px
+    height: 20px
+    &::after, &::before
+      content: ""
+      width: 100%
+      height: 2px
+      position: absolute
+      left: 0
+      background-color: #64c29e
+      transition: all .3s ease 0s
+    &::after
+      top: 0
+    &::before
+      bottom: 0
+    span
+      position: absolute
+      background-color: #64c29e
+      width: 100%
+      left: 0
+      top: 9px
+      height: 2px
+      transition: all .3s ease 0s
+
+
+  a
+    display: none!important
+
+nav.active
+  display: block
+  position: absolute
+  width: 100%
+  background-color: #222429
+  height: 100vh
+  overflow: auto
+  transition: all .3s ease 0s
+  a
+    color: #f7f7f7!important
+    font-size: 20px!important
+    padding: 0!important
+    display: block!important
+    transition: all 1s ease 1s
+    margin-top: 50px
+    &:first-child
+      margin-top: 100px
+
+
+
+
+
+
+
 .header
   // min-width: 1000px
   padding-top: 91px
