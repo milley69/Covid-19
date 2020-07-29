@@ -8,6 +8,10 @@
   box-sizing: border-box
   margin: 0
   padding: 0
+  border: none
+
+a,p,span,h1,h2,h3,h4,h5
+  font-weight: 400
 
 html
   overflow-x: hidden
@@ -17,21 +21,138 @@ html
 body
   background-color: #ffffff
 
-// .container
-//   max-width: 1000px
-//   padding: 0 35px
-//   margin: 0 auto
+header
+  background-color: #f5f8fb
+  height: 100vh
+
+.assessment
+  height: 60px
+  background-color: #112950
+  display: flex
+  justify-content: center
+  align-items: center
+  a
+    position: relative
+    color: #fff
+    text-decoration: none
+    font-family: 'Inter', sans-serif
+    font-size: 16px
+    letter-spacing: 0.08px
+    &::before
+      content: ""
+      position: absolute
+      width: 96.5%
+      height: 1px
+      bottom: -2px
+      left: 0
+      background-color: #fff
+      visibility: hidden
+      transform: scaleX(0)
+      transition: all .5s cubic-bezier(1,.25,0,.75) 0s
+    &:hover::before
+      visibility: visible
+      transform: scaleX(1)
+
+.navigation
+  height: 87px
+
+.header_logo
+  position: absolute
+  top: 78px
+
+nav
+  text-align: right
+  a
+    color: #324b72
+    font-family: 'Inter', sans-serif
+    font-size: 15px
+    text-decoration: none
+    margin-top: 24px
+    letter-spacing: 0.15px
+    animation-timing-function: ease-in-out
+    transition: .3s
+
+    display: inline-block
+    margin-right: 44px
+    &:last-child
+      margin-right: 0
+    &:hover
+      color: #5c9fff
+
+.header__burger
+  display: none
+
+.header__burger.active
+  &::before
+    transform: rotate(45deg)
+    top: 9px
+  &::after
+    transform: rotate(-45deg)
+    top: 9px
+  span
+    transform: scale(0)
 
 
+@media (max-width: 575.98px)
+  body.lock
+    overflow: hidden
+  .header_logo
+    left: 9%
+    img
+      width: 140%
+  .header__burger
+    margin: 31px 15% 0 auto
+    display: block
+    position: relative
+    width: 30px
+    height: 20px
+    &::after, &::before
+      content: ""
+      width: 100%
+      height: 2px
+      position: absolute
+      left: 0
+      background-color: #5c9fff
+      transition: all .3s ease 0s
+    &::after
+      top: 0
+    &::before
+      bottom: 0
+    span
+      position: absolute
+      background-color: #5c9fff
+      width: 100%
+      left: 0
+      top: 9px
+      height: 2px
+      transition: all .3s ease 0s
+  nav
+    text-align: center
+    a
+      display: none!important
+      margin-right: 0
 
-
-
-
-
-
-
-
-
+nav.active
+  display: block
+  position: absolute
+  width: 40%
+  background-color: #112950
+  border-radius: 0px 0px 0px 140px
+  height: 40vh
+  top: 59px
+  right: 0
+  overflow: auto
+  transition: all .3s ease 0s, border-radius 0s ease 0s
+  // transition: border-radius 0s ease 0s
+  a
+    color: #f7f7f7!important
+    font-size: 20px!important
+    padding: 0!important
+    display: block !important
+    transition: all 1s ease 1s
+    margin-top: 50px
+    &:first-child
+      margin-top: 75px
 
 
 
